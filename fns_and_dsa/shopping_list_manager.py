@@ -8,7 +8,4 @@ def display_menu():
 
 display_menu()
 
-try:
-    choice = int(input("Enter your choice: "))
-except ValueError:
-    print("Invalid input")
+choice = int(input("Enter your choice: "))
