@@ -1,27 +1,24 @@
-# library_system.py
-
-# Base class
 class Book:
     def __init__(self, title, author):
         self.title = title
         self.author = author
 
-# Derived class - EBook
+
 class EBook(Book):
     def __init__(self, title, author, file_size):
-        super().__init__(title, author)  # Call base class constructor
+        super().__init__(title, author)
         self.file_size = file_size
 
-# Derived class - PrintBook
+
 class PrintBook(Book):
     def __init__(self, title, author, page_count):
-        super().__init__(title, author)  # Call base class constructor
+        super().__init__(title, author)
         self.page_count = page_count
 
-# Composition class - Library
+
 class Library:
     def __init__(self):
-        self.books = []  # Store instances of Book, EBook, PrintBook
+        self.books = []
 
     def add_book(self, book):
         self.books.append(book)
